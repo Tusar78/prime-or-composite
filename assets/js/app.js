@@ -16,6 +16,15 @@ let primeTitle = document.getElementById("prime-title"),
 // Get All icon
 let icons = document.getElementsByClassName("icon");
 
+// Display None Function
+const displayNone = (element) => {
+  element.style.display = 'none';
+}
+// Display Block Function
+const displayBlock = (element) => {
+  element.style.display = 'block';
+}
+
 // Prime checker Function
 const isPrimeChecker = () => {
   const userInput = parseInt(inputFilled.value);
@@ -24,10 +33,10 @@ const isPrimeChecker = () => {
   if (userInput === 1 || userInput === 0) {
     isPrime = false;
 
-    inputBox.style.display = "none";
-    composite.style.display = "none";
-    prime.style.display = "none";
-    neutral.style.display = "block";
+    displayNone(inputBox);
+    displayNone(composite);
+    displayNone(prime);
+    displayBlock(neutral);
     neutralTitle.innerText = `${userInput} is prime nor composite`;
   } else if (userInput > 1) {
     for (let i = 2; i < userInput; i++) {
@@ -38,43 +47,33 @@ const isPrimeChecker = () => {
     }
 
     if (isPrime) {
-      inputBox.style.display = "none";
-      composite.style.display = "none";
-      neutral.style.display = "none";
-      prime.style.display = "block";
+      displayNone(inputBox)
+      displayNone(composite)
+      displayNone(neutral)
+      displayBlock(prime)
       primeTitle.innerText = `${userInput} is a prime number`;
     } else {
-      inputBox.style.display = "none";
-      prime.style.display = "none";
-      neutral.style.display = "none";
-      composite.style.display = "block";
+      displayNone(inputBox)
+      displayNone(prime)
+      displayNone(neutral)
+      displayBlock(composite)
       compositeTitle.innerText = `${userInput} is a composite number`;
     }
-  }
-
+  }  
   // Clear Input filled value
   inputFilled.value = "";
 };
 
+// Event Listener!
 check.addEventListener("click", isPrimeChecker);
 
 for (const icon of icons) {
-  icon.addEventListener("click", function () {
-    if (icon.src.includes("party")) {
-      prime.style.display = "none";
-      composite.style.display = "none";
-      neutral.style.display = "none";
-      inputBox.style.display = "block";
-    } else if (icon.src.includes("cool")) {
-      composite.style.display = "none";
-      neutral.style.display = "none";
-      prime.style.display = "none";
-      inputBox.style.display = "block";
-    } else if (icon.src.includes("info")) {
-      neutral.style.display = "none";
-      prime.style.display = "none";
-      composite.style.display = "none";
-      inputBox.style.display = "block";
+  icon.addEventListener("click", () => {
+    if (icon.src) {
+      displayNone(prime);
+      displayNone(composite);
+      displayNone(neutral);
+      displayBlock(inputBox);
     }
   });
 }
