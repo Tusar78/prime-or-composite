@@ -33,7 +33,10 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.prime__title {
+.prime__title,
+.output__title-prime,
+.output__title-composite,
+.output__title-neutral {
   font-size: 0.875rem;
   font-weight: 300;
 }
@@ -48,6 +51,7 @@ button {
   margin: 0 auto;
   font-size: 2rem;
   font-weight: 500;
+  color: #facc15;
   text-align: center;
   padding: 0 1rem;
   border: none;
@@ -83,4 +87,49 @@ button {
   border-radius: 6px;
   margin-top: .625rem;
   cursor: pointer;
+}
+
+.prime__icon {
+  width: 100px;
+  height: auto;
+}
+
+.prime__input {
+  transform: scale(1);
+  transition: .3s ease;  
+}
+
+.prime{
+  /* display: none; */
+  transform: scale(0);
+  transition: .3s ease;
+}
+
+.prime__body-output {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.output__title-prime {
+  font-weight: 400;
+  background-color: #dfeaff;
+}
+
+.output__title-composite {
+  /* background-color: #ffdddd; */
+  background: #fee2e2;
+}
+
+.output__title-neutral {
+  background: #fef9c3;
+}
+
+.prime__icon {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}
+
+.composite {
+  display: none;
 }

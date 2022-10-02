@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- === Meta Info === -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- === Meta Info === -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- === Attach css file === -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- === Attach css file === -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- === Website Title === -->
-  <title>Prime or Not</title>
-</head>
-<body>
-  <main class="main">
-    <div class="prime-container">
-      <div class="prime__head">
-        <span class="prime__title">Prime or Composite</span>
+    <!-- === Website Title === -->
+    <title>Prime or Not</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <!-- Input Filled -->
+        <div class="input-box" id="input-box">
+          <span class="input__title">Prime or Composite.</span>
+          <div class="input__body">
+            <input type="text" class="input__text" id="input-text" />
+            <label for="input-text" class="input__label">enter number</label>
+          </div>
+          <button class="btn-primary" id="check-btn">Check</button>
+        </div>
+
+        <!-- Prime Number -->
+        <div class="prime" id="prime">
+          <span class="prime__title" id="prime-title"></span>
+          <div class="prime__body">
+            <img
+              src="./assets/images/party.png"
+              alt="Party img"
+              title="Click to close"
+              class="icon"
+            />
+          </div>
+        </div>
+
+        <!-- Composite Number -->
+        <div class="composite" id="composite">
+          <span class="composite__title" id="composite-title"></span>
+          <div class="composite__body">
+            <img
+              src="./assets/images/sad.png"
+              alt="Sad img"
+              title="Click to close"
+              class="icon"
+            />
+          </div>
+        </div>
+
+        <!-- Prime nor composite -->
+        <div class="neutral" id="neutral">
+          <span class="neutral__title" id="neutral-title"></span>
+          <div class="neutral__body">
+            <img
+              src="./assets/images/info.png"
+              alt="Info img"
+              title="Click to close"
+              class="icon"
+            />
+          </div>
+        </div>
       </div>
-      <div class="prime__body">
-        <input type="text" class="prime__input-box" id="input-box">
-        <label for="input-box" class="prime__text">enter number</label>
-      </div>
-      <button class="prime__btn">Check</button>
-    </div>
-  </main>
+    </main>
 
-  <script src="./assets/js/app.js"></script>
-</body>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>
