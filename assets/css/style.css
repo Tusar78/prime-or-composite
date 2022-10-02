@@ -98,37 +98,29 @@ button {
   height: auto;
 }
 
-.prime{
-  /* display: none; */
-  transform: scale(0);
-  transition: .3s ease;
+.prime, .composite, .neutral{
+  display: none;
 }
 
-.prime__body-output {
+.body {
   margin-top: 1.5rem;
   text-align: center;
 }
 
-.output__title-prime {
-  font-weight: 400;
+.prime__title{
   background-color: #dfeaff;
 }
 
-.output__title-composite {
-  /* background-color: #ffdddd; */
+.composite__title {
   background: #fee2e2;
 }
 
-.output__title-neutral {
+.neutral__title {
   background: #fef9c3;
 }
 
-.prime__icon {
+.icon {
   width: 80px;
   height: auto;
   cursor: pointer;
-}
-
-.composite {
-  display: none;
 }
