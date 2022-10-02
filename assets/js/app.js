@@ -1,13 +1,17 @@
-// Initialize Variables
-let inputFilled = document.getElementById("input-box"),
-  check = document.getElementById("prime-btn"),
-  inputPrime = document.getElementById("prime-input"),
-  prime = document.getElementById("prime"),
-  composite = document.getElementById("composite"),
-  neutral = document.getElementById("neutral"),
-  primeText = document.getElementById("prime-text"),
-  compositeText = document.getElementById("composite-text"),
-  neutralText = document.getElementById("neutral-text");
+// Input from and Button
+let check = document.getElementById("check-btn"),
+    inputFilled = document.getElementById("input-text");
+
+// Input Card, Prime card, Composite Card and Neutral Card
+let inputBox = document.getElementById('input-box'),
+    prime = document.getElementById('prime'),
+    composite = document.getElementById('composite'),
+    neutral = document.getElementById('neutral');
+
+// Display title text
+let primeTitle = document.getElementById('prime-title'),
+    compositeTitle = document.getElementById('composite-title'),
+    neutralTitle = document.getElementById('neutral-title');
 
 
 const isPrime = () => {

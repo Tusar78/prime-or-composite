@@ -1,3 +1,4 @@
+/* Import "Fira Code" fonts from fonts.google.com */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap");
 
 *,
@@ -23,7 +24,7 @@ button {
   place-items: center;
 }
 
-.prime-container {
+.container {
   width: 336px;
   height: 176px;
   overflow: hidden;
@@ -33,32 +34,30 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.prime__title,
-.output__title-prime,
-.output__title-composite,
-.output__title-neutral {
+/* Input filled Area */
+.title{
   font-size: 0.875rem;
   font-weight: 300;
 }
 
-.prime__body {
+.input__body {
   margin-top: 0.5rem;
 }
 
-.prime__input-box {
-  display: block;
+.input__text {
   width: 80%;
+  display: block;
   margin: 0 auto;
   font-size: 2rem;
   font-weight: 500;
-  color: #facc15;
   text-align: center;
+  color: #facc15;
   padding: 0 1rem;
   border: none;
   outline: none;
 }
 
-.prime__text {
+.input__label {
   margin-top: .625rem;
   display: block;
   font-size: 0.875rem;
@@ -67,18 +66,18 @@ button {
   position: relative;
 }
 
-.prime__text::before {
+.input__label::before {
   content: "";
   width: 65px;
   height: 1px;
-  background: #cbb9ee;
+  background: #facc15;
   position: absolute;
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.prime__btn {
+.btn-primary {
   border: none;
   background: #6070f4;
   padding: .5rem 1.5rem;
@@ -89,14 +88,14 @@ button {
   cursor: pointer;
 }
 
-.prime__icon {
-  width: 100px;
-  height: auto;
+.btn-primary:hover {
+  background: #4348e8;
 }
 
-.prime__input {
-  transform: scale(1);
-  transition: .3s ease;  
+/* Icon Size */
+.icon {
+  width: 100px;
+  height: auto;
 }
 
 .prime{
