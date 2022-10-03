@@ -34,8 +34,6 @@ const isPrimeChecker = () => {
     isPrime = false;
 
     displayNone(inputBox);
-    displayNone(composite);
-    displayNone(prime);
     displayBlock(neutral);
     neutralTitle.innerText = `${userInput} is prime nor composite`;
   } else if (userInput > 1) {
@@ -47,16 +45,12 @@ const isPrimeChecker = () => {
     }
 
     if (isPrime) {
-      displayNone(inputBox)
-      displayNone(composite)
-      displayNone(neutral)
+      displayNone(inputBox);
       displayBlock(prime)
       primeTitle.innerText = `${userInput} is a prime number`;
     } else {
-      displayNone(inputBox)
-      displayNone(prime)
-      displayNone(neutral)
-      displayBlock(composite)
+      displayNone(inputBox);
+      displayBlock(composite);
       compositeTitle.innerText = `${userInput} is a composite number`;
     }
   }  
@@ -67,6 +61,7 @@ const isPrimeChecker = () => {
 // Event Listener!
 check.addEventListener("click", isPrimeChecker);
 
+// Traverse all icons
 for (const icon of icons) {
   icon.addEventListener("click", () => {
     if (icon.src) {

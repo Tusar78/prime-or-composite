@@ -1,6 +1,40 @@
 /* Import "Fira Code" fonts from fonts.google.com */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap");
 
+/* Necessary Variable */
+:root {
+  /* Font & Typography */
+  --body-font: "Fira Code", monospace;
+  --big-size: 2rem;
+  --base-size: 1rem;
+  --small-size: 0.875rem;
+  --smallest-size: 0.825rem;
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+
+  --p-025: 0.125rem;
+  --p-05: 0.5rem;
+  --p-1: 1rem;
+  --p-15: 1.5rem;
+
+  /* Color */
+  --primary-color: #6070f4;
+  --danger-color: #f7aab2;
+  --info-color: #facc15;
+
+  --primary-light: #dfeaff;
+  --danger-light: #fee2e2;
+  --info-light: #fef9c3;
+
+  --primary-dark: #4348e8;
+
+  --light-color: #f3f3ff;
+  --white-color: #fff;  
+}
+
+/* Reset Code */
 *,
 ::before,
 ::after {
@@ -9,13 +43,19 @@
 
 body {
   margin: 0;
-  font-family: "Fira Code", monospace;
-  background: #f3f3f3;
+  background: var(--light-color);
+  font-size: var(--base-size);
+  font-family: var(--body-font);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 input,
 button {
-  font-family: "Fira Code", monospace;
+  font-family: var(--body-font);
 }
 
 .main {
@@ -28,16 +68,16 @@ button {
   width: 336px;
   height: 176px;
   overflow: hidden;
-  padding: 1rem;
+  padding: var(--p-1);
   border-radius: 6px;
-  background: #fff;
+  background: var(--white-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Input filled Area */
 .title{
-  font-size: 0.875rem;
-  font-weight: 300;
+  font-size: var(--small-size);
+  font-weight: var(--font-light);
 }
 
 .input__body {
@@ -48,11 +88,11 @@ button {
   width: 80%;
   display: block;
   margin: 0 auto;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: var(--big-size);
+  font-weight: var(--font-medium);
   text-align: center;
   color: #facc15;
-  padding: 0 1rem;
+  padding: 0 var(--p-1);
   border: none;
   outline: none;
 }
@@ -60,8 +100,8 @@ button {
 .input__label {
   margin-top: .625rem;
   display: block;
-  font-size: 0.875rem;
-  font-weight: 300;
+  font-size: var(--small-size);
+  font-weight: var(--font-light);
   text-align: center;
   position: relative;
 }
@@ -70,7 +110,7 @@ button {
   content: "";
   width: 65px;
   height: 1px;
-  background: #facc15;
+  background: var(--info-color);
   position: absolute;
   top: -5px;
   left: 50%;
@@ -79,9 +119,10 @@ button {
 
 .btn-primary {
   border: none;
-  background: #6070f4;
-  padding: .5rem 1.5rem;
-  color: #fff;
+  background: var(--primary-color);
+  padding: var(--p-05) var(--p-15);
+  font-size: var(--smallest-size);
+  color: var(--white-color);
   outline: none;
   border-radius: 6px;
   margin-top: .625rem;
@@ -89,36 +130,39 @@ button {
 }
 
 .btn-primary:hover {
-  background: #4348e8;
+  background: var(--primary-dark);
 }
 
-/* Icon Size */
-.icon {
-  width: 100px;
-  height: auto;
-}
-
+/* Display Area */
 .prime, .composite, .neutral{
   display: none;
 }
 
-.body {
+.output-body {
   margin-top: 1.5rem;
   text-align: center;
 }
 
+.prime__title,
+.composite__title,
+.neutral__title {
+  padding: var(--p-025) var(--p-05);
+  border-radius: 6px;
+}
+
 .prime__title{
-  background-color: #dfeaff;
+  background-color: var(--primary-light);
 }
 
 .composite__title {
-  background: #fee2e2;
+  background: var(--danger-light);
 }
 
 .neutral__title {
-  background: #fef9c3;
+  background: var(--info-light);
 }
 
+/* Icon Size */
 .icon {
   width: 80px;
   height: auto;
